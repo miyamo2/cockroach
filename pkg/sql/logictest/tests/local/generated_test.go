@@ -1849,13 +1849,6 @@ func TestLogic_select_for_share(
 	runLogicTest(t, "select_for_share")
 }
 
-func TestLogic_select_for_update(
-	t *testing.T,
-) {
-	defer leaktest.AfterTest(t)()
-	runLogicTest(t, "select_for_update")
-}
-
 func TestLogic_select_index(
 	t *testing.T,
 ) {
@@ -2022,6 +2015,13 @@ func TestLogic_show_default_privileges(
 ) {
 	defer leaktest.AfterTest(t)()
 	runLogicTest(t, "show_default_privileges")
+}
+
+func TestLogic_show_external_connections(
+	t *testing.T,
+) {
+	defer leaktest.AfterTest(t)()
+	runLogicTest(t, "show_external_connections")
 }
 
 func TestLogic_show_fingerprints(
